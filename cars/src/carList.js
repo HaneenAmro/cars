@@ -9,18 +9,17 @@ const CarList = (props) => {
             
                     props.carData.map((item) => (
                         < SingleCar make={item.make} year={item.year} model={item.model} vin={item.vin} color={item.color} value={props.value}
-                            price={item.askingPrice} cost={item.dealerCost} dateListed={item.dateListed} lotName={item.lot.name} 
-                            lotCity={item.lot.city}  lotCountry={item.lot.country}
+                            price={item.askingPrice} cost={item.dealerCost} dateListed={item.dateListed} lotName={item.name} 
+                            lotCity={item.city}  lotCountry={item.country}
                         />
                     )) 
                 :
-                    props.carData.filter((item) => {
-                        let upperValue = props.value.charAt(0).toUpperCase()+ props.value.slice(1);
-                        return Object.values(item).includes(upperValue) || Object.values(item.lot).includes(upperValue)
-                    }).map((item) => (
+                    props.carData.filter((item) => (
+                        Object.values(item).includes(props.value.toUpperCase()) 
+                    )).map((item) => (
                         < SingleCar make={item.make} year={item.year} model={item.model} vin={item.vin} color={item.color} value={props.value}
-                            price={item.askingPrice} cost={item.dealerCost} dateListed={item.dateListed} lotName={item.lot.name} 
-                            lotCity={item.lot.city}  lotCountry={item.lot.country}
+                            price={item.askingPrice} cost={item.dealerCost} dateListed={item.dateListed} lotName={item.name} 
+                            lotCity={item.city}  lotCountry={item.country}
                         />
                     )) 
             }     
