@@ -1,4 +1,6 @@
-const CarData = (props) => {
+import SingleCar from './singleCar.js';
+
+const CarList = (props) => {
 
     return (
         <div>
@@ -7,4 +9,4 @@ const CarData = (props) => {
     )
 
 }
-export default CarData;
+export default CarList;
