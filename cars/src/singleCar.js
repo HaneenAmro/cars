@@ -1,6 +1,6 @@
 const SingleCar = (props) => {
     return (
-        <div>
+        <div className="singleCar">
             <div> Year: {props.year} </div>            
             <div> Make: {props.make} </div>
             <div> Model: {props.model} </div> 
