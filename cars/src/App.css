@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #282c34;
 }
 
 .App-logo {
@@ -39,6 +40,24 @@
 
 .singleCar {
   padding: 10px;
- 
+  width: 70%;
+  margin-left: 15%;
 }
+
+.typograghy {
+  width: 100%;
+  text-align: left;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+span {
+  margin-left: 1%;
+}
+
+
+
 

@@ -8,22 +8,24 @@ const SingleCar = (props) => {
         <div className="singleCar">
             <Accordion>
                 <AccordionSummary>
-                    <Typography>
-                        <div> Year: {props.year} </div>            
-                        <div> Make: {props.make} </div>
-                        <div> Model: {props.model} </div> 
-                        <div> Price: {props.price}</div>
+                    <Typography className="typograghy">
+                        <div className="container">           
+                            <div> <strong>Make: </strong> {props.make} </div>
+                            <div> <strong>Year: </strong> {props.year} </div> 
+                            <div> <strong>Model: </strong> {props.model} </div> 
+                            <div> <strong>Price: </strong> {props.price} </div>
+                        </div>
                     </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                    <Typography>
-                        <div> color: {props.color} </div>
-                        <div> vin: {props.vin} </div>
-                        <div>Dealer cost: {props.coast}</div>
-                        <div> Lot :
-                            <span> Name: {props.lotName}</span>
-                            <span> /City: {props.lotCity}</span>
-                            <span> /Country: {props.lotCountry}</span>
+                    <Typography className="typograghy">
+                        <div> <strong>color: </strong> {props.color} </div>
+                        <div> <strong>vin: </strong> {props.vin} </div>
+                        <div> <strong>Dealer cost: </strong> {props.cost}</div>
+                        <div > <strong>Lot :: </strong>
+                                <span> Name: {props.lotName}</span>
+                                <span> City: {props.lotCity}</span>
+                                <span> Country: {props.lotCountry} </span>
                         </div>
 
                     </Typography>
