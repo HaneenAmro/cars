@@ -9,7 +9,15 @@ class App extends React.Component  {
     super(props);
     this.state = {
       carData : carData,
+      value: ""
     }
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({
+      value: event.target.value
+    })
   }
 
   render() {
@@ -17,7 +25,7 @@ class App extends React.Component  {
     <div className="App">
       <div>
         <label> Search </label>
-        <input type="text" ></input>
+        <input type="text" value={this.state.value} onChange={this.handleChange} ></input>
       </div>
       <CarList carData={this.state.carData}/>
     </div>
