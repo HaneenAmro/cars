@@ -1,6 +1,7 @@
 import { carData } from './carData';
 import React from 'react'; 
 import './App.css';
+import CarList from './carList.js';
 
 class App extends React.Component  {
 
@@ -14,9 +15,7 @@ class App extends React.Component  {
   render() {
   return (
     <div className="App">
-      {this.state.carData.map((item) => (
-        <div>{item.make}</div>
-      ))}
+      <CarList />
     </div>
   );
   }
