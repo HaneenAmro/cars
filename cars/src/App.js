@@ -15,6 +15,10 @@ class App extends React.Component  {
   render() {
   return (
     <div className="App">
+      <div>
+        <label> Search </label>
+        <input type="text" ></input>
+      </div>
       <CarList carData={this.state.carData}/>
     </div>
   );
