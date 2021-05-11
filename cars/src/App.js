@@ -27,7 +27,7 @@ class App extends React.Component  {
         <label> Search </label>
         <input type="text" value={this.state.value} onChange={this.handleChange} ></input>
       </div>
-      <CarList carData={this.state.carData}/>
+      <CarList carData={this.state.carData} value={this.state.value}/>
     </div>
   );
   }
