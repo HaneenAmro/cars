@@ -3,21 +3,12 @@ import React from 'react';
 import './App.css';
 import CarList from './carList.js';
 
-let data =[];
-carData.forEach((elemnt) => {
-  let obj={}  
-  for (let key in elemnt) {
-    if (typeof elemnt[key] !== "object"  ) {
-      obj[key] = elemnt[key].toString().toUpperCase();   
-  } else {
-      for (let x in elemnt[key]) {
-        obj[x] = elemnt[key][x].toString().toUpperCase();   
-    } 
-  }
-}
-    data.push(obj);
-});
 
+  let data = carData.map((elemnt) => {
+  let str = JSON.stringify(elemnt).toUpperCase();
+    elemnt.index = str
+    return elemnt;
+  });
 
 
 class App extends React.Component  {

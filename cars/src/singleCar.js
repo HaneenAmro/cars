@@ -22,12 +22,11 @@ const SingleCar = (props) => {
                         <div> <strong>color: </strong> {props.color} </div>
                         <div> <strong>vin: </strong> {props.vin} </div>
                         <div> <strong>Dealer cost: </strong> {props.cost}</div>
-                        <div > <strong>Lot :: </strong>
+                        <div> <strong>Lot :: </strong>
                                 <span> Name: {props.lotName}</span>
                                 <span> City: {props.lotCity}</span>
                                 <span> Country: {props.lotCountry} </span>
                         </div>
-
                     </Typography>
                 </AccordionDetails>
             </Accordion>

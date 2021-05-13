@@ -6,7 +6,7 @@ const CarList = (props) => {
         <div>
             { 
                 props.value === "" ? 
-            
+
                     props.carData.map((item) => (
                         < SingleCar make={item.make} year={item.year} model={item.model} vin={item.vin} color={item.color} value={props.value}
                             price={item.askingPrice} cost={item.dealerCost} dateListed={item.dateListed} lotName={item.name} 
@@ -14,9 +14,14 @@ const CarList = (props) => {
                         />
                     )) 
                 :
-                    props.carData.filter((item) => (
-                        Object.values(item).includes(props.value.toUpperCase()) 
-                    )).map((item) => (
+                    props.carData.filter((item) => {
+                       // debugger;
+                        let result = false;
+                            if (item.index.includes(props.value.toUpperCase())) {
+                                result = true;
+                            } 
+                            return result;            
+                    }).map((item) => (
                         < SingleCar make={item.make} year={item.year} model={item.model} vin={item.vin} color={item.color} value={props.value}
                             price={item.askingPrice} cost={item.dealerCost} dateListed={item.dateListed} lotName={item.name} 
                             lotCity={item.city}  lotCountry={item.country}
